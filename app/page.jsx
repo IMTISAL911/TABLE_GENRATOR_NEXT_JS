@@ -37,11 +37,11 @@ export default function Home() {
       type="text" 
       placeholder=" enter the num" 
       value={number}
-      onChange={(e)=>setNumber(e.target.value)}
+      onChange={(e)=>dispatch(setNumber(e.target.value))}
       style={{ padding: "8px", fontSize: "16px", width: "150px" }}
 
       />
-      <button onClick={generateTable} className="bg-blue-600 rounded-lg px-4 py-1 cursor-pointer">GENRATE</button>
+      <button onClick={() => dispatch(generateTable())} className="bg-blue-600 rounded-lg px-4 py-1 cursor-pointer">GENRATE</button>
  </div>
        <div style={{ marginTop: "20px", fontSize: "18px", fontWeight: "bold",  }}>
            
