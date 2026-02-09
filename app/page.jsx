@@ -5,28 +5,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { setNumber , generateTable } from "./redux/tableSlice";
 
 export default function Home() {
-  // const [number, setNumber] = useState("");
-  // const [table, setTable] = useState([]);
-
+  
   const dispatch = useDispatch();
   const{ number , table} = useSelector((state)=>state.table)
 
 
-  // const generateTable = () => {
-  //   if (number === "") {
-  //     setTable(["Please enter a number!"]);
-  //     return;
-  //   }
-
-  //   let result = [];
-
-  //   for (let i = 1; i <= 10; i++) {
-  //     result.push(`${number} x ${i} = ${number * i}`);
-  //   }
-
-  //   setTable(result);
-  // };
-
+  
   return(
     <div className=" flex justify-center flex-col items-center">
       <h1 className="mt-[3%] font-sans font-bold text-2xl">TABLE GENRATOR</h1>
